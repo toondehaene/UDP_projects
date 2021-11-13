@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "UDPsend_recv/1.0.0": {
+        "runtime": {
+          "UDPsend_recv.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "UDPsend_recv/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
