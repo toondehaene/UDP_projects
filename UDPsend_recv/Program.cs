@@ -22,6 +22,11 @@ namespace UDPsend_recv
             var recvThread = new Thread(ArduinoComm.StartReceive);
             sendThread.Start();
             recvThread.Start();
+            for (var i = 0; i < 5; i++)
+            {
+                Console.WriteLine("output string: ");
+                ArduinoComm.DataOut = Encoding.ASCII.GetBytes(Console.ReadLine() ?? "null_input");
+            }
         }
     }
 }
@@ -44,7 +49,7 @@ public class ArduinoComm
             }
 
             
-            Console.WriteLine("data received, raw print:" + Encoding.ASCII.GetString(DataIn));
+            // Console.WriteLine("data received, raw print:" + Encoding.ASCII.GetString(DataIn));
         }
     }
 
@@ -66,7 +71,7 @@ public class ArduinoComm
             }
 
             udpClientA.Send(buf, buf.Length, "192.168.1.255", portNrSend);
-            Console.WriteLine("one message sent");
+            // Console.WriteLine("one message sent");
             Thread.Sleep(1000);
         }
     }
