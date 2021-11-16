@@ -49,7 +49,8 @@ public class ArduinoComm
             }
 
             
-            // Console.WriteLine("data received, raw print:" + Encoding.ASCII.GetString(DataIn));
+            Console.WriteLine("data received, raw print:" + Encoding.ASCII.GetString(DataIn));
+            // Thread.Sleep(500); //TODO: comment this out
         }
     }
 
@@ -70,9 +71,9 @@ public class ArduinoComm
                 buf = DataOut;
             }
 
-            udpClientA.Send(buf, buf.Length, "192.168.1.255", portNrSend);
+            udpClientA.Send(buf, buf.Length, "192.168.137.255", portNrSend);
             // Console.WriteLine("one message sent");
-            Thread.Sleep(1000);
+            Thread.Sleep(200);
         }
     }
 
